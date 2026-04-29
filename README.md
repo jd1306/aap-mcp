@@ -19,23 +19,23 @@ npm install
 
 ### Configuration
 
-#### Option 1: Environment Variables (Recommended for CI/CD)
-```bash
-export AAP_BASE_URL="https://aap.example.com"
-export AAP_TOKEN="your-api-token"
-npm start
-```
-
-#### Option 2: Interactive Setup (Recommended for Development)
+#### Option 1: Interactive Setup
 ```bash
 npm run setup-keychain
-npm start
 ```
 
 This interactive setup guides you through:
 - Choosing authentication method (API token or username/password)
 - Entering credentials (with hidden password input)
 - Selecting storage method (macOS Keychain, .env file, or environment variables)
+
+(Interactive should be all you need to get started unless you care to follow one of the other paths)
+
+#### Option 2: Environment Variables (Recommended for CI/CD)
+```bash
+export AAP_BASE_URL="https://aap.example.com"
+export AAP_TOKEN="your-api-token"
+```
 
 #### Option 3: .env File (For Development Only)
 Create `~/.config/aap-mcp/.env.aap`:
