@@ -29,7 +29,9 @@ This interactive setup guides you through:
 - Entering credentials (with hidden password input)
 - Selecting storage method (macOS Keychain, .env file, or environment variables)
 
-(Interactive should be all you need to get started unless you care to follow one of the other paths)
+```bash
+Note: Interactive should be all you need to get started unless you care to follow one of the other paths
+```
 
 #### Option 2: Environment Variables (Recommended for CI/CD)
 ```bash
