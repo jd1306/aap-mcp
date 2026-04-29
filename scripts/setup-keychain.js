@@ -178,7 +178,7 @@ async function main() {
         console.error("\n✗ API token cannot be empty");
         process.exit(1);
       }
-      credentials.token = token;
+      credentials.token = token.trim();
     } else {
       // Username and Password authentication
       const username = await question(rl, "Enter your AAP username: ");
@@ -192,7 +192,7 @@ async function main() {
         process.exit(1);
       }
       credentials.username = username;
-      credentials.password = password;
+      credentials.password = password.trim();
     }
 
     // Get base URL (always required)
@@ -200,7 +200,7 @@ async function main() {
       rl,
       "\nEnter your AAP base URL [https://aap.example.com]: "
     );
-    const baseUrl = baseUrlInput || "https://aap.example.com";
+    const baseUrl = (baseUrlInput || "https://aap.example.com").trim();
 
     if (!isValidUrl(baseUrl)) {
       console.error("\n✗ Invalid URL format");
